@@ -1,0 +1,82 @@
+{
+    "name": "Group",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "universignOrganizationId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "GroupStatus",
+            "fieldValues": "REGISTERING,ACTIVE"
+        },
+        {
+            "fieldName": "activateAdvanced",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "universignOrganizationProfil",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "groupConfiguration",
+            "otherEntityRelationshipName": "group",
+            "relationshipName": "groupConfiguration",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "group",
+            "otherEntityRelationshipName": "group",
+            "relationshipName": "parent",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "groupPermission",
+            "otherEntityRelationshipName": "group",
+            "relationshipName": "permissions",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "link",
+            "otherEntityRelationshipName": "group",
+            "relationshipName": "administrators"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "link",
+            "otherEntityRelationshipName": "group",
+            "relationshipName": "operators"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "link",
+            "otherEntityRelationshipName": "group",
+            "relationshipName": "affiliatedGroups"
+        }
+    ],
+    "changelogDate": "20190909161436",
+    "entityTableName": "group",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

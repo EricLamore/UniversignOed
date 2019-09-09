@@ -1,0 +1,32 @@
+{
+  "universignOedApp": {
+    "group": {
+      "home": {
+        "title": "Groups",
+        "createLabel": "Créer un nouveau Group",
+        "createOrEditLabel": "Créer ou éditer un Group",
+        "notFound": "Aucun Group trouvé"
+      },
+      "created": "Un nouveau Group a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Group avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Group avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Group {{ id }} ?"
+      },
+      "detail": {
+        "title": "Group"
+      },
+      "name": "Name",
+      "universignOrganizationId": "Universign Organization Id",
+      "status": "Status",
+      "activateAdvanced": "Activate Advanced",
+      "universignOrganizationProfil": "Universign Organization Profil",
+      "groupConfiguration": "Group Configuration",
+      "parent": "Parent",
+      "permissions": "Permissions",
+      "administrators": "Administrators",
+      "operators": "Operators",
+      "affiliatedGroups": "Affiliated Groups"
+    }
+  }
+}

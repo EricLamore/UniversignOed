@@ -1,0 +1,33 @@
+{
+    "name": "Link",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipName": "group",
+            "otherEntityName": "group",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "group",
+            "otherEntityName": "group",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "group",
+            "otherEntityName": "group",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190909161437",
+    "entityTableName": "link",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
