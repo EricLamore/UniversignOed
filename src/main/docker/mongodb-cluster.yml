@@ -1,0 +1,16 @@
+version: '2'
+services:
+  universignoed-mongodb:
+    image: mongo:4.0.10
+    ports:
+      - '27017:27017'
+    command: mongos --configdb universignoed-mongodb-config
+  universignoed-mongodb-node:
+    build:
+      context: .
+      dockerfile: mongodb/MongoDB.Dockerfile
+    command: mongod --replSet rs1 --noprealloc --smallfiles
+  universignoed-mongodb-config:
+    image: mongo:4.0.10
+    container_name: universignoed-mongodb-config
+    command: mongod --noprealloc --smallfiles --configsvr --dbpath /data/db
