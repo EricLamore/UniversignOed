@@ -1,0 +1,32 @@
+entity Administrator {
+    firstName String required
+    lastName String required
+    emailAddress String required
+    birthDate LocalDate
+	role Role
+    password String required
+    administratorStatus AdministratorStatus
+    function String
+    phone String
+    mobilePhone String
+    description String
+    universignAdmin Boolean
+}
+
+enum Role {
+    SUPER_ADMIN, GROUP_ADMIN, AFFILIATED_ADMIN, USER, GUEST
+}
+
+enum AdministratorStatus {
+    REGISTERING, ACTIVE, DEACTIVATED
+}
+
+
+// Set pagination options
+paginate all with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
