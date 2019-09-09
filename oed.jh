@@ -1,0 +1,105 @@
+entity Administrator {
+    firstName String required
+    lastName String required
+    emailAddress String required
+    birthDate LocalDate
+	role Role
+    password String required
+    status Status
+    function String
+    phone String
+    mobilePhone String
+    description String
+    universignAdmin Boolean
+}
+
+enum Role {
+    SUPER_ADMIN, GROUP_ADMIN, AFFILIATED_ADMIN, USER, GUEST
+}
+
+enum Status {
+    REGISTERING, ACTIVE, DEACTIVATED
+}
+
+
+entity CertifiedUser {
+	firstname String
+	lastname String
+	email String
+	phoneNumber String
+}
+
+entity ErrorRequest {
+	comment String
+    firstName String required
+    lastName String required
+    emailAddress String required
+    birthDate LocalDate
+}
+
+entity Group {
+	name String required
+    universignOrganizationId String
+    groupConfiguration GroupConfiguration
+    status GroupStatus
+    parent Group
+    permissions GroupPermission
+    activateAdvanced Boolean
+    universignOrganizationProfil String
+}
+
+entity GroupConfiguration {
+	header HeaderConfiguration
+    i18n Properties
+    metaDatas Properties
+}
+
+entity GroupPermission {
+	moveOperatorsToUniversignOrganization Boolean
+    allowCustomization Boolean
+    allowAffiliatedGroup Boolean
+    allowAffiliatedCustomization Boolean
+}
+
+entity HeaderConfiguration {
+	logo String
+    width Integer
+    href String
+}
+
+
+entity Properties {
+
+}
+
+entity Operator {
+	status OpearatorStatus required
+    phoneNumber String
+    invitationDate LocalDate
+    invitationUrl String
+    updateAccessDate Boolean
+    accessDate LocalDate
+    updateTrainingDate Boolean
+    trainingDate LocalDate
+    hasSucceededMCQ Boolean
+    updateQCMDate Boolean
+    mcqDate LocalDate
+    trainingSessionId String
+    trainingSessionURL String
+    metaDatas Properties
+    sessionId String
+    groupId String
+}
+
+enum OpearatorStatus {
+	CREATED, VALIDATED
+}
+
+// Set pagination options
+paginate all with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
