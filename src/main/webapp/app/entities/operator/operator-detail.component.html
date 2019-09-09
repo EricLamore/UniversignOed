@@ -1,0 +1,89 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="operator">
+            <h2><span jhiTranslate="universignOedApp.operator.detail.title">Operator</span> {{operator.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="universignOedApp.operator.status">Status</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'universignOedApp.OpearatorStatus.' + operator.status}}">{{operator.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.phoneNumber">Phone Number</span></dt>
+                <dd>
+                    <span>{{operator.phoneNumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.invitationDate">Invitation Date</span></dt>
+                <dd>
+                    <span>{{operator.invitationDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.invitationUrl">Invitation Url</span></dt>
+                <dd>
+                    <span>{{operator.invitationUrl}}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.updateAccessDate">Update Access Date</span></dt>
+                <dd>
+                    <span>{{operator.updateAccessDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.accessDate">Access Date</span></dt>
+                <dd>
+                    <span>{{operator.accessDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.updateTrainingDate">Update Training Date</span></dt>
+                <dd>
+                    <span>{{operator.updateTrainingDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.trainingDate">Training Date</span></dt>
+                <dd>
+                    <span>{{operator.trainingDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.hasSucceededMCQ">Has Succeeded MCQ</span></dt>
+                <dd>
+                    <span>{{operator.hasSucceededMCQ}}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.updateQCMDate">Update QCM Date</span></dt>
+                <dd>
+                    <span>{{operator.updateQCMDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.mcqDate">Mcq Date</span></dt>
+                <dd>
+                    <span>{{operator.mcqDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.trainingSessionId">Training Session Id</span></dt>
+                <dd>
+                    <span>{{operator.trainingSessionId}}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.trainingSessionURL">Training Session URL</span></dt>
+                <dd>
+                    <span>{{operator.trainingSessionURL}}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.sessionId">Session Id</span></dt>
+                <dd>
+                    <span>{{operator.sessionId}}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.groupId">Group Id</span></dt>
+                <dd>
+                    <span>{{operator.groupId}}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.metaDatas">Meta Datas</span></dt>
+                <dd>
+                    <div *ngIf="operator.metaDatas">
+                        <a [routerLink]="['/map-properties', operator.metaDatas?.id, 'view']">{{operator.metaDatas?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/operator', operator.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

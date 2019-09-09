@@ -1,0 +1,78 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-group-heading" jhiTranslate="universignOedApp.group.home.createOrEditLabel">Create or edit a Group</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.group.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           formControlName="name"/>
+                    <div *ngIf="editForm.get('name').invalid && (editForm.get('name').dirty || editForm.get('name').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('name').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.group.universignOrganizationId" for="field_universignOrganizationId">Universign Organization Id</label>
+                    <input type="text" class="form-control" name="universignOrganizationId" id="field_universignOrganizationId"
+                           formControlName="universignOrganizationId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.group.status" for="field_status">Status</label>
+                    <select class="form-control" name="status" formControlName="status" id="field_status">
+                        <option value="REGISTERING">{{'universignOedApp.GroupStatus.REGISTERING' | translate}}</option>
+                        <option value="ACTIVE">{{'universignOedApp.GroupStatus.ACTIVE' | translate}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.group.activateAdvanced" for="field_activateAdvanced">Activate Advanced</label>
+                    <input type="checkbox" class="form-control" name="activateAdvanced" id="field_activateAdvanced"
+                           formControlName="activateAdvanced"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.group.universignOrganizationProfil" for="field_universignOrganizationProfil">Universign Organization Profil</label>
+                    <input type="text" class="form-control" name="universignOrganizationProfil" id="field_universignOrganizationProfil"
+                           formControlName="universignOrganizationProfil"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.group.groupConfiguration" for="field_groupConfiguration">Group Configuration</label>
+                    <select class="form-control" id="field_groupConfiguration" name="groupConfiguration" formControlName="groupConfiguration">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="groupConfigurationOption.id === editForm.get('groupConfiguration').value?.id ? editForm.get('groupConfiguration').value : groupConfigurationOption" *ngFor="let groupConfigurationOption of groupconfigurations; trackBy: trackGroupConfigurationById">{{groupConfigurationOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.group.parent" for="field_parent">Parent</label>
+                    <select class="form-control" id="field_parent" name="parent" formControlName="parent">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="groupOption.id === editForm.get('parent').value?.id ? editForm.get('parent').value : groupOption" *ngFor="let groupOption of parents; trackBy: trackGroupById">{{groupOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.group.permissions" for="field_permissions">Permissions</label>
+                    <select class="form-control" id="field_permissions" name="permissions" formControlName="permissions">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="groupPermissionOption.id === editForm.get('permissions').value?.id ? editForm.get('permissions').value : groupPermissionOption" *ngFor="let groupPermissionOption of permissions; trackBy: trackGroupPermissionById">{{groupPermissionOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
