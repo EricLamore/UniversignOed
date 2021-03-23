@@ -1,0 +1,93 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="universignOedApp.groupConfiguration.home.title">Group Configurations</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-group-configuration" [routerLink]="['/group-configuration/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="universignOedApp.groupConfiguration.home.createLabel">
+            Create a new Group Configuration
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="groupConfigurations?.length === 0">
+        <span jhiTranslate="universignOedApp.groupConfiguration.home.notFound">No groupConfigurations found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="groupConfigurations && groupConfigurations.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
+                    <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="header.id"><span jhiTranslate="universignOedApp.groupConfiguration.header">Header</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="i18n.id"><span jhiTranslate="universignOedApp.groupConfiguration.i18n">I 18 N</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="metaDatas.id"><span jhiTranslate="universignOedApp.groupConfiguration.metaDatas">Meta Datas</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="languages.id"><span jhiTranslate="universignOedApp.groupConfiguration.languages">Languages</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let groupConfiguration of groupConfigurations ;trackBy: trackId">
+                    <td><a [routerLink]="['/group-configuration', groupConfiguration.id, 'view']">{{ groupConfiguration.id }}</a></td>
+                    <td>
+                        <div *ngIf="groupConfiguration.header">
+                            <a [routerLink]="['/header-configuration', groupConfiguration.header?.id, 'view']" >{{ groupConfiguration.header?.id }}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="groupConfiguration.i18n">
+                            <a [routerLink]="['/properties', groupConfiguration.i18n?.id, 'view']" >{{ groupConfiguration.i18n?.id }}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="groupConfiguration.metaDatas">
+                            <a [routerLink]="['/properties', groupConfiguration.metaDatas?.id, 'view']" >{{ groupConfiguration.metaDatas?.id }}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="groupConfiguration.languages">
+                            <a [routerLink]="['/map-properties', groupConfiguration.languages?.id, 'view']" >{{ groupConfiguration.languages?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/group-configuration', groupConfiguration.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/group-configuration', groupConfiguration.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(groupConfiguration)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="groupConfigurations && groupConfigurations.length > 0">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="ngbPaginationPage" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+        </div>
+    </div>
+</div>

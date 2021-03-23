@@ -1,0 +1,21 @@
+{
+  "name": "MapProperties",
+  "fields": [
+    {
+      "fieldName": "dummy",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210323154814",
+  "entityTableName": "map_properties",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
