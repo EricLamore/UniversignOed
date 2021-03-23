@@ -7,6 +7,16 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entidades",
+        "administrator": "Administrator",
+        "certifiedUser": "Certified User",
+        "errorRequest": "Error Request",
+        "group": "Group",
+        "link": "Link",
+        "groupConfiguration": "Group Configuration",
+        "groupPermission": "Group Permission",
+        "headerConfiguration": "Header Configuration",
+        "mapProperties": "Map Properties",
+        "operator": "Operator",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

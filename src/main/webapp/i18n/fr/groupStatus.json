@@ -1,0 +1,9 @@
+{
+  "universignOedApp": {
+    "GroupStatus": {
+      "null": "",
+      "REGISTERING": "REGISTERING",
+      "ACTIVE": "ACTIVE"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "universignOedApp": {
+    "operator": {
+      "home": {
+        "title": "Operators",
+        "createLabel": "Crear nuevo Operator",
+        "createOrEditLabel": "Crear o editar Operator",
+        "notFound": "Ningún Operators encontrado"
+      },
+      "created": "Un nuevo Operator ha sido creado con el identificador {{ param }}",
+      "updated": "Un Operator ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Operator ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Operator {{ id }}?"
+      },
+      "detail": {
+        "title": "Operator"
+      },
+      "status": "Status",
+      "phoneNumber": "Phone Number",
+      "invitationDate": "Invitation Date",
+      "invitationUrl": "Invitation Url",
+      "updateAccessDate": "Update Access Date",
+      "accessDate": "Access Date",
+      "updateTrainingDate": "Update Training Date",
+      "trainingDate": "Training Date",
+      "hasSucceededMCQ": "Has Succeeded MCQ",
+      "updateQCMDate": "Update QCM Date",
+      "mcqDate": "Mcq Date",
+      "trainingSessionId": "Training Session Id",
+      "trainingSessionURL": "Training Session URL",
+      "sessionId": "Session Id",
+      "groupId": "Group Id",
+      "metaDatas": "Meta Datas"
+    }
+  }
+}

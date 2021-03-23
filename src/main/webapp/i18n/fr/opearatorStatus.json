@@ -1,0 +1,9 @@
+{
+  "universignOedApp": {
+    "OpearatorStatus": {
+      "null": "",
+      "CREATED": "CREATED",
+      "VALIDATED": "VALIDATED"
+    }
+  }
+}
