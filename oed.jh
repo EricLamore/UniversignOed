@@ -1,0 +1,133 @@
+entity CertifiedUser {
+	firstname String
+	lastname String
+	email String
+	phoneNumber String
+}
+
+entity ErrorRequest {
+	comment String
+    firstName String required
+    lastName String required
+    emailAddress String required
+    birthDate LocalDate
+}
+
+entity Group {
+	name String required
+    universignOrganizationId String
+    status GroupStatus
+    activateAdvanced Boolean
+    universignOrganizationProfil String
+    createdAt Instant
+    lastUpdatedAt Instant
+}
+
+relationship OneToOne {
+	Group{permissions} to GroupPermission
+}
+
+relationship OneToOne {
+	Group{groupConfiguration} to GroupConfiguration
+}
+
+relationship OneToOne {
+	Group{parent} to Group
+}
+
+relationship OneToMany {
+	Group{administrators} to Link
+}
+
+relationship OneToMany {
+	Group{operators} to Link
+}
+
+relationship OneToMany {
+	Group{affiliatedGroups} to Link
+}
+
+entity Link {
+}
+
+enum GroupStatus {
+    REGISTERING, ACTIVE
+}
+
+
+entity HeaderConfiguration {
+	logo String
+    width Integer
+    href String
+}
+entity Properties {
+
+}
+
+entity GroupConfiguration {
+
+}
+
+relationship OneToOne {
+	GroupConfiguration{header} to HeaderConfiguration
+}
+relationship OneToOne {
+	GroupConfiguration{i18n} to Properties
+}
+relationship OneToOne {
+	GroupConfiguration{metaDatas} to Properties
+}
+relationship OneToOne {
+	GroupConfiguration{languages} to MapProperties
+}
+
+
+entity GroupPermission {
+	moveOperatorsToUniversignOrganization Boolean
+    allowCustomization Boolean
+    allowAffiliatedGroup Boolean
+    allowAffiliatedCustomization Boolean
+}
+
+entity MapProperties {
+	dummy String
+}
+
+entity Operator {
+	status OpearatorStatus required
+    phoneNumber String
+    invitationDate LocalDate
+    invitationUrl String
+    updateAccessDate Boolean
+    accessDate LocalDate
+    updateTrainingDate Boolean
+    trainingDate LocalDate
+    hasSucceededMCQ Boolean
+    updateQCMDate Boolean
+    mcqDate LocalDate
+    trainingSessionId String
+    trainingSessionURL String
+    sessionId String
+    language String
+    groupId String
+    groupName String
+}
+
+relationship OneToOne {
+	Operator{metaDatas} to MapProperties
+}
+
+
+
+enum OpearatorStatus {
+	CREATED, VALIDATED
+}
+
+// Set pagination options
+paginate all with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
