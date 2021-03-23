@@ -1,0 +1,38 @@
+entity Operator {
+	status OpearatorStatus required
+    phoneNumber String
+    invitationDate LocalDate
+    invitationUrl String
+    updateAccessDate Boolean
+    accessDate LocalDate
+    updateTrainingDate Boolean
+    trainingDate LocalDate
+    hasSucceededMCQ Boolean
+    updateQCMDate Boolean
+    mcqDate LocalDate
+    trainingSessionId String
+    trainingSessionURL String
+    sessionId String
+    language String
+    groupId String
+    groupName String
+}
+
+relationship OneToOne {
+	Operator{metaDatas} to MapProperties
+}
+
+
+
+enum OpearatorStatus {
+	CREATED, VALIDATED
+}
+
+// Set pagination options
+paginate all with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
