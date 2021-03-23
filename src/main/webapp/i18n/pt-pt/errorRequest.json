@@ -1,0 +1,26 @@
+{
+  "universignOedApp": {
+    "errorRequest": {
+      "home": {
+        "title": "Error Requests",
+        "createLabel": "Criar novo(a) Error Request",
+        "createOrEditLabel": "Criar ou editar Error Request",
+        "notFound": "Nenhum Error Requests encontrado"
+      },
+      "created": "Um novo Error Request foi criado com o identificador {{ param }}",
+      "updated": "Error Request com identificador {{ param }} foi actualizado",
+      "deleted": "Error Request com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Error Request {{ id }}?"
+      },
+      "detail": {
+        "title": "Error Request"
+      },
+      "comment": "Comment",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "emailAddress": "Email Address",
+      "birthDate": "Birth Date"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "AdminPermissions",
+  "fields": [
+    {
+      "fieldName": "oedWrite",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "groupWrite",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "adminWrite",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210323171805",
+  "entityTableName": "admin_permissions",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

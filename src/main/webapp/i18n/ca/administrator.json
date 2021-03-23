@@ -1,0 +1,39 @@
+{
+  "universignOedApp": {
+    "administrator": {
+      "home": {
+        "title": "Administrators",
+        "createLabel": "Create a new Administrator",
+        "createOrEditLabel": "Create or edit a Administrator",
+        "notFound": "No Administrators found"
+      },
+      "created": "A new Administrator is created with identifier {{ param }}",
+      "updated": "A Administrator is updated with identifier {{ param }}",
+      "deleted": "A Administrator is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Administrator {{ id }}?"
+      },
+      "detail": {
+        "title": "Administrator"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "emailAddress": "Email Address",
+      "birthDate": "Birth Date",
+      "role": "Role",
+      "password": "Password",
+      "status": "Status",
+      "adminFunction": "Admin Function",
+      "phone": "Phone",
+      "mobilePhone": "Mobile Phone",
+      "description": "Description",
+      "universignAdmin": "Universign Admin",
+      "activationKey": "Activation Key",
+      "resetKey": "Reset Key",
+      "resetDate": "Reset Date",
+      "permissions": "Permissions",
+      "dashboardPreferences": "Dashboard Preferences",
+      "oedPreferences": "Oed Preferences"
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "name": "Operator",
+  "fields": [
+    {
+      "fieldName": "status",
+      "fieldType": "OpearatorStatus",
+      "fieldValues": "CREATED,VALIDATED",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "invitationDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "invitationUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updateAccessDate",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "accessDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updateTrainingDate",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "trainingDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "hasSucceededMCQ",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "updateQCMDate",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "mcqDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "trainingSessionId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "trainingSessionURL",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sessionId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "language",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "groupId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "groupName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "signatureStatus",
+      "fieldType": "SignatureStatus",
+      "fieldValues": "READY,EXPIRED,COMPLETED,CANCELED,FAILED,PENDING,UNKNOWN"
+    },
+    {
+      "fieldName": "isOED",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "signatureSessionId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "signatureSessionURL",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "universignStatus",
+      "fieldType": "UniversignStatus",
+      "fieldValues": "STATUS_INACTIVE,STATUS_ACTIVE,STATUS_DELETED,STATUS_ON_HOLD,STATUS_RA_ACTIVE,STATUS_USER_INEXISTENT,UNKNOWN"
+    },
+    {
+      "fieldName": "certified",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "qualified",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "previousFinalUniversignStatus",
+      "fieldType": "SignatureStatus",
+      "fieldValues": "READY,EXPIRED,COMPLETED,CANCELED,FAILED,PENDING,UNKNOWN"
+    },
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "emailAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "birthDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "certifiedUser",
+      "otherEntityRelationshipName": "operator",
+      "relationshipName": "certifiedUser",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "mapProperties",
+      "otherEntityRelationshipName": "operator",
+      "relationshipName": "metaDatas",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20210323173005",
+  "entityTableName": "operator",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
