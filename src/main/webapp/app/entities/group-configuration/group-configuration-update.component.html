@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-group-configuration-heading" jhiTranslate="universignOedApp.groupConfiguration.home.createOrEditLabel">Create or edit a Group Configuration</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.groupConfiguration.header" for="field_header">Header</label>
+                    <select class="form-control" id="field_header" name="header" formControlName="header">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="headerConfigurationOption.id === editForm.get('header')!.value?.id ? editForm.get('header')!.value : headerConfigurationOption" *ngFor="let headerConfigurationOption of headers; trackBy: trackById">{{ headerConfigurationOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.groupConfiguration.i18n" for="field_i18n">I 18 N</label>
+                    <select class="form-control" id="field_i18n" name="i18n" formControlName="i18n">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="propertiesOption.id === editForm.get('i18n')!.value?.id ? editForm.get('i18n')!.value : propertiesOption" *ngFor="let propertiesOption of i18ns; trackBy: trackById">{{ propertiesOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.groupConfiguration.metaDatas" for="field_metaDatas">Meta Datas</label>
+                    <select class="form-control" id="field_metaDatas" name="metaDatas" formControlName="metaDatas">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="propertiesOption.id === editForm.get('metaDatas')!.value?.id ? editForm.get('metaDatas')!.value : propertiesOption" *ngFor="let propertiesOption of metadatas; trackBy: trackById">{{ propertiesOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.groupConfiguration.languages" for="field_languages">Languages</label>
+                    <select class="form-control" id="field_languages" name="languages" formControlName="languages">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="mapPropertiesOption.id === editForm.get('languages')!.value?.id ? editForm.get('languages')!.value : mapPropertiesOption" *ngFor="let mapPropertiesOption of languages; trackBy: trackById">{{ mapPropertiesOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
