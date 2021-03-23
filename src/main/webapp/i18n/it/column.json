@@ -1,0 +1,24 @@
+{
+  "universignOedApp": {
+    "column": {
+      "home": {
+        "title": "Columns",
+        "createLabel": "Genera un nuovo Column",
+        "createOrEditLabel": "Genera o modifica un Column",
+        "notFound": "No Columns found"
+      },
+      "created": "&Egrave; stato generato un nuovo Column con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Column identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Column con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Column {{ id }}?"
+      },
+      "detail": {
+        "title": "Column"
+      },
+      "show": "Show",
+      "name": "Name",
+      "type": "Type"
+    }
+  }
+}

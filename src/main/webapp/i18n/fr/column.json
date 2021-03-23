@@ -1,0 +1,24 @@
+{
+  "universignOedApp": {
+    "column": {
+      "home": {
+        "title": "Columns",
+        "createLabel": "Créer un nouveau Column",
+        "createOrEditLabel": "Créer ou éditer un Column",
+        "notFound": "Aucun Column trouvé"
+      },
+      "created": "Un nouveau Column a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Column avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Column avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Column {{ id }} ?"
+      },
+      "detail": {
+        "title": "Column"
+      },
+      "show": "Show",
+      "name": "Name",
+      "type": "Type"
+    }
+  }
+}
