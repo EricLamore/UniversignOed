@@ -1,0 +1,24 @@
+{
+  "universignOedApp": {
+    "headerConfiguration": {
+      "home": {
+        "title": "Header Configurations",
+        "createLabel": "Crear nuevo Header Configuration",
+        "createOrEditLabel": "Crear o editar Header Configuration",
+        "notFound": "Ningún Header Configurations encontrado"
+      },
+      "created": "Un nuevo Header Configuration ha sido creado con el identificador {{ param }}",
+      "updated": "Un Header Configuration ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Header Configuration ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Header Configuration {{ id }}?"
+      },
+      "detail": {
+        "title": "Header Configuration"
+      },
+      "logo": "Logo",
+      "width": "Width",
+      "href": "Href"
+    }
+  }
+}

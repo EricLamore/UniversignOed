@@ -1,0 +1,25 @@
+{
+  "universignOedApp": {
+    "groupPermission": {
+      "home": {
+        "title": "Group Permissions",
+        "createLabel": "Criar novo(a) Group Permission",
+        "createOrEditLabel": "Criar ou editar Group Permission",
+        "notFound": "Nenhum Group Permissions encontrado"
+      },
+      "created": "Um novo Group Permission foi criado com o identificador {{ param }}",
+      "updated": "Group Permission com identificador {{ param }} foi actualizado",
+      "deleted": "Group Permission com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Group Permission {{ id }}?"
+      },
+      "detail": {
+        "title": "Group Permission"
+      },
+      "moveOperatorsToUniversignOrganization": "Move Operators To Universign Organization",
+      "allowCustomization": "Allow Customization",
+      "allowAffiliatedGroup": "Allow Affiliated Group",
+      "allowAffiliatedCustomization": "Allow Affiliated Customization"
+    }
+  }
+}
