@@ -1,0 +1,154 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="operator">
+            <h2><span jhiTranslate="universignOedApp.operator.detail.title">Operator</span> {{ operator.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="universignOedApp.operator.status">Status</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'universignOedApp.OpearatorStatus.' + operator.status }}">{{ operator.status }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.phoneNumber">Phone Number</span></dt>
+                <dd>
+                    <span>{{ operator.phoneNumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.invitationDate">Invitation Date</span></dt>
+                <dd>
+                    <span>{{ operator.invitationDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.invitationUrl">Invitation Url</span></dt>
+                <dd>
+                    <span>{{ operator.invitationUrl }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.updateAccessDate">Update Access Date</span></dt>
+                <dd>
+                    <span>{{ operator.updateAccessDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.accessDate">Access Date</span></dt>
+                <dd>
+                    <span>{{ operator.accessDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.updateTrainingDate">Update Training Date</span></dt>
+                <dd>
+                    <span>{{ operator.updateTrainingDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.trainingDate">Training Date</span></dt>
+                <dd>
+                    <span>{{ operator.trainingDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.hasSucceededMCQ">Has Succeeded MCQ</span></dt>
+                <dd>
+                    <span>{{ operator.hasSucceededMCQ }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.updateQCMDate">Update QCM Date</span></dt>
+                <dd>
+                    <span>{{ operator.updateQCMDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.mcqDate">Mcq Date</span></dt>
+                <dd>
+                    <span>{{ operator.mcqDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.trainingSessionId">Training Session Id</span></dt>
+                <dd>
+                    <span>{{ operator.trainingSessionId }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.trainingSessionURL">Training Session URL</span></dt>
+                <dd>
+                    <span>{{ operator.trainingSessionURL }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.sessionId">Session Id</span></dt>
+                <dd>
+                    <span>{{ operator.sessionId }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.language">Language</span></dt>
+                <dd>
+                    <span>{{ operator.language }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.groupId">Group Id</span></dt>
+                <dd>
+                    <span>{{ operator.groupId }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.groupName">Group Name</span></dt>
+                <dd>
+                    <span>{{ operator.groupName }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.signatureStatus">Signature Status</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'universignOedApp.SignatureStatus.' + operator.signatureStatus }}">{{ operator.signatureStatus }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.isOED">Is OED</span></dt>
+                <dd>
+                    <span>{{ operator.isOED }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.signatureSessionId">Signature Session Id</span></dt>
+                <dd>
+                    <span>{{ operator.signatureSessionId }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.signatureSessionURL">Signature Session URL</span></dt>
+                <dd>
+                    <span>{{ operator.signatureSessionURL }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.universignStatus">Universign Status</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'universignOedApp.UniversignStatus.' + operator.universignStatus }}">{{ operator.universignStatus }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.certified">Certified</span></dt>
+                <dd>
+                    <span>{{ operator.certified }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.qualified">Qualified</span></dt>
+                <dd>
+                    <span>{{ operator.qualified }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.previousFinalUniversignStatus">Previous Final Universign Status</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'universignOedApp.SignatureStatus.' + operator.previousFinalUniversignStatus }}">{{ operator.previousFinalUniversignStatus }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.firstName">First Name</span></dt>
+                <dd>
+                    <span>{{ operator.firstName }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.lastName">Last Name</span></dt>
+                <dd>
+                    <span>{{ operator.lastName }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.emailAddress">Email Address</span></dt>
+                <dd>
+                    <span>{{ operator.emailAddress }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.birthDate">Birth Date</span></dt>
+                <dd>
+                    <span>{{ operator.birthDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.certifiedUser">Certified User</span></dt>
+                <dd>
+                    <div *ngIf="operator.certifiedUser">
+                        <a [routerLink]="['/certified-user', operator.certifiedUser?.id, 'view']">{{ operator.certifiedUser?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.operator.metaDatas">Meta Datas</span></dt>
+                <dd>
+                    <div *ngIf="operator.metaDatas">
+                        <a [routerLink]="['/map-properties', operator.metaDatas?.id, 'view']">{{ operator.metaDatas?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/operator', operator.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

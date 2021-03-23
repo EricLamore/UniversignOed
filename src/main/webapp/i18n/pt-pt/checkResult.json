@@ -1,0 +1,24 @@
+{
+  "universignOedApp": {
+    "checkResult": {
+      "home": {
+        "title": "Check Results",
+        "createLabel": "Criar novo(a) Check Result",
+        "createOrEditLabel": "Criar ou editar Check Result",
+        "notFound": "Nenhum Check Results encontrado"
+      },
+      "created": "Um novo Check Result foi criado com o identificador {{ param }}",
+      "updated": "Check Result com identificador {{ param }} foi actualizado",
+      "deleted": "Check Result com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Check Result {{ id }}?"
+      },
+      "detail": {
+        "title": "Check Result"
+      },
+      "checkErrorMessage": "Check Error Message",
+      "status": "Status",
+      "result": "Result"
+    }
+  }
+}
