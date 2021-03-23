@@ -1,0 +1,25 @@
+{
+  "universignOedApp": {
+    "certifiedUser": {
+      "home": {
+        "title": "Certified Users",
+        "createLabel": "Criar novo(a) Certified User",
+        "createOrEditLabel": "Criar ou editar Certified User",
+        "notFound": "Nenhum Certified Users encontrado"
+      },
+      "created": "Um novo Certified User foi criado com o identificador {{ param }}",
+      "updated": "Certified User com identificador {{ param }} foi actualizado",
+      "deleted": "Certified User com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Certified User {{ id }}?"
+      },
+      "detail": {
+        "title": "Certified User"
+      },
+      "firstname": "Firstname",
+      "lastname": "Lastname",
+      "email": "Email",
+      "phoneNumber": "Phone Number"
+    }
+  }
+}
