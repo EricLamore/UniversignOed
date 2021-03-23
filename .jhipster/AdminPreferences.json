@@ -1,0 +1,28 @@
+{
+  "name": "AdminPreferences",
+  "fields": [
+    {
+      "fieldName": "filter",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "column",
+      "otherEntityRelationshipName": "adminPreferences",
+      "relationshipName": "columns"
+    }
+  ],
+  "changelogDate": "20210323155037",
+  "entityTableName": "admin_preferences",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

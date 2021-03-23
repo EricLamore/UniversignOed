@@ -1,0 +1,9 @@
+export const enum Role {
+  SUPER_ADMIN = 'SUPER_ADMIN',
+
+  GROUP_ADMIN = 'GROUP_ADMIN',
+
+  AFFILIATED_ADMIN = 'AFFILIATED_ADMIN',
+
+  GUEST = 'GUEST',
+}
