@@ -1,0 +1,49 @@
+{
+  "name": "Group",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "universignOrganizationId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "GroupStatus",
+      "fieldValues": "REGISTERING,ACTIVE"
+    },
+    {
+      "fieldName": "activateAdvanced",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "universignOrganizationProfil",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastUpdatedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210323153642",
+  "entityTableName": "group",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
