@@ -1,0 +1,25 @@
+{
+  "universignOedApp": {
+    "administrator": {
+      "home": {
+        "title": "Administrators",
+        "createLabel": "Criar novo(a) Administrator",
+        "createOrEditLabel": "Criar ou editar Administrator",
+        "notFound": "Nenhum Administrators encontrado"
+      },
+      "created": "Um novo Administrator foi criado com o identificador {{ param }}",
+      "updated": "Administrator com identificador {{ param }} foi actualizado",
+      "deleted": "Administrator com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Administrator {{ id }}?"
+      },
+      "detail": {
+        "title": "Administrator"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "emailAddress": "Email Address",
+      "birthDate": "Birth Date"
+    }
+  }
+}
