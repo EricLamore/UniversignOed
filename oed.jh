@@ -1,0 +1,69 @@
+
+
+entity GroupConfiguration {
+	header HeaderConfiguration
+    i18n Properties
+    metaDatas Properties
+    gourpLanguages MapProperties
+}
+
+entity Properties {
+
+}
+
+
+entity GroupPermission {
+	moveOperatorsToUniversignOrganization Boolean
+    allowCustomization Boolean
+    allowAffiliatedGroup Boolean
+    allowAffiliatedCustomization Boolean
+}
+
+entity HeaderConfiguration {
+	logo String
+    width Integer
+    href String
+}
+
+entity MapProperties {
+	dummy String
+}
+
+entity Operator {
+	status OpearatorStatus required
+    phoneNumber String
+    invitationDate LocalDate
+    invitationUrl String
+    updateAccessDate Boolean
+    accessDate LocalDate
+    updateTrainingDate Boolean
+    trainingDate LocalDate
+    hasSucceededMCQ Boolean
+    updateQCMDate Boolean
+    mcqDate LocalDate
+    trainingSessionId String
+    trainingSessionURL String
+    sessionId String
+    language String
+    groupId String
+    groupName String
+}
+
+relationship OneToOne {
+	Operator{metaDatas} to MapProperties
+}
+
+
+
+enum OpearatorStatus {
+	CREATED, VALIDATED
+}
+
+// Set pagination options
+paginate all with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
