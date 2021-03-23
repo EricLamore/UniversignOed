@@ -1,0 +1,38 @@
+{
+  "name": "Link",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "group",
+      "otherEntityRelationshipName": "administrators",
+      "relationshipName": "group",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "group",
+      "otherEntityRelationshipName": "operators",
+      "relationshipName": "group",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "group",
+      "otherEntityRelationshipName": "affiliatedGroups",
+      "relationshipName": "group",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210323153930",
+  "entityTableName": "link",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
