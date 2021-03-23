@@ -1,0 +1,22 @@
+{
+  "universignOedApp": {
+    "mapProperties": {
+      "home": {
+        "title": "Map Properties",
+        "createLabel": "Criar novo(a) Map Properties",
+        "createOrEditLabel": "Criar ou editar Map Properties",
+        "notFound": "Nenhum Map Properties encontrado"
+      },
+      "created": "Um novo Map Properties foi criado com o identificador {{ param }}",
+      "updated": "Map Properties com identificador {{ param }} foi actualizado",
+      "deleted": "Map Properties com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Map Properties {{ id }}?"
+      },
+      "detail": {
+        "title": "Map Properties"
+      },
+      "dummy": "Dummy"
+    }
+  }
+}

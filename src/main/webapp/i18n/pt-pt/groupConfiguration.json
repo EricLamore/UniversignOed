@@ -1,0 +1,24 @@
+{
+  "universignOedApp": {
+    "groupConfiguration": {
+      "home": {
+        "title": "Group Configurations",
+        "createLabel": "Criar novo(a) Group Configuration",
+        "createOrEditLabel": "Criar ou editar Group Configuration",
+        "notFound": "Nenhum Group Configurations encontrado"
+      },
+      "created": "Um novo Group Configuration foi criado com o identificador {{ param }}",
+      "updated": "Group Configuration com identificador {{ param }} foi actualizado",
+      "deleted": "Group Configuration com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Group Configuration {{ id }}?"
+      },
+      "detail": {
+        "title": "Group Configuration"
+      },
+      "header": "Header",
+      "i18n": "I 18 N",
+      "metaDatas": "Meta Datas"
+    }
+  }
+}
