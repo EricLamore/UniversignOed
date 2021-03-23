@@ -1,0 +1,196 @@
+entity Administrator {
+    firstName String required
+    lastName String required
+    emailAddress String required
+    birthDate LocalDate
+	role Role
+    password String required
+    status AdministratorStatus
+    function String
+    phone String
+    mobilePhone String
+    description String
+    universignAdmin Boolean
+    activationKey String
+    resetKey String
+    resetDate Instant
+}
+
+relationship OneToOne {
+	Administrator{permissions} to AdminPermissions
+}
+
+relationship OneToOne {
+	Administrator{dashboardPreferences} to AdminPreferences
+}
+
+relationship OneToOne {
+	Administrator{oedPreferences} to AdminPreferences
+}
+
+entity AdminPermissions {
+	oedWrite Boolean
+	groupWrite Boolean
+	adminWrite Boolean
+}
+
+entity AdminPreferences {
+	adminFilter String
+}
+
+entity Column {
+    show Boolean
+    name String
+	type String
+}
+
+relationship OneToMany {
+	AdminPreferences{columns} to Column
+}
+enum Role {
+    SUPER_ADMIN, GROUP_ADMIN, AFFILIATED_ADMIN, GUEST
+}
+
+enum AdministratorStatus {
+    REGISTERING, ACTIVE, DEACTIVATED
+}
+
+entity CertifiedUser {
+	firstname String
+	lastname String
+	email String
+	phoneNumber String
+}
+
+entity ErrorRequest {
+	comment String
+    firstName String required
+    lastName String required
+    emailAddress String required
+    birthDate LocalDate
+}
+
+entity Group {
+	name String required
+    universignOrganizationId String
+    status GroupStatus
+    activateAdvanced Boolean
+    universignOrganizationProfil String
+    createdAt Instant
+    lastUpdatedAt Instant
+}
+
+enum GroupStatus {
+    REGISTERING, ACTIVE
+}
+
+relationship OneToMany {
+	Group{administrators} to Link
+}
+
+relationship OneToMany {
+	Group{operators} to Link
+}
+
+relationship OneToMany {
+	Group{affiliatedGroups} to Link
+}
+
+entity Link {
+}
+
+entity GroupConfiguration {
+	header HeaderConfiguration
+    i18n Properties
+    metaDatas Properties
+    gourpLanguages Map
+}
+
+entity Properties {
+
+}
+
+entity Map {
+
+}
+
+relationship OneToOne {
+	Group{groupConfiguration} to GroupConfiguration
+}
+
+relationship OneToOne {
+	Group{parent} to Group
+}
+
+relationship OneToOne {
+	Group{permissions} to GroupPermission
+}
+
+relationship OneToOne {
+	GroupConfiguration{header} to HeaderConfiguration
+}
+
+relationship OneToOne {
+	GroupConfiguration{i18n} to MapProperties
+}
+
+relationship OneToOne {
+	GroupConfiguration{metaDatas} to MapProperties
+}
+
+entity GroupPermission {
+	moveOperatorsToUniversignOrganization Boolean
+    allowCustomization Boolean
+    allowAffiliatedGroup Boolean
+    allowAffiliatedCustomization Boolean
+}
+
+entity HeaderConfiguration {
+	logo String
+    width Integer
+    href String
+}
+
+
+entity MapProperties {
+	dummy String
+}
+
+entity Operator {
+	status OpearatorStatus required
+    phoneNumber String
+    invitationDate LocalDate
+    invitationUrl String
+    updateAccessDate Boolean
+    accessDate LocalDate
+    updateTrainingDate Boolean
+    trainingDate LocalDate
+    hasSucceededMCQ Boolean
+    updateQCMDate Boolean
+    mcqDate LocalDate
+    trainingSessionId String
+    trainingSessionURL String
+    sessionId String
+    language String
+    groupId String
+    groupName String
+}
+
+relationship OneToOne {
+	Operator{metaDatas} to MapProperties
+}
+
+
+
+enum OpearatorStatus {
+	CREATED, VALIDATED
+}
+
+// Set pagination options
+paginate all with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
