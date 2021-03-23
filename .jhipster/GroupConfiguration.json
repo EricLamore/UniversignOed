@@ -1,0 +1,49 @@
+{
+  "name": "GroupConfiguration",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "headerConfiguration",
+      "otherEntityRelationshipName": "groupConfiguration",
+      "relationshipName": "header",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "properties",
+      "otherEntityRelationshipName": "groupConfiguration",
+      "relationshipName": "i18n",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "properties",
+      "otherEntityRelationshipName": "groupConfiguration",
+      "relationshipName": "metaDatas",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "mapProperties",
+      "otherEntityRelationshipName": "groupConfiguration",
+      "relationshipName": "languages",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20210323155837",
+  "entityTableName": "group_configuration",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
