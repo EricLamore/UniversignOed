@@ -1,0 +1,98 @@
+{
+  "name": "Operator",
+  "fields": [
+    {
+      "fieldName": "status",
+      "fieldType": "OpearatorStatus",
+      "fieldValues": "CREATED,VALIDATED",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "invitationDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "invitationUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updateAccessDate",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "accessDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "updateTrainingDate",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "trainingDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "hasSucceededMCQ",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "updateQCMDate",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "mcqDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "trainingSessionId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "trainingSessionURL",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sessionId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "language",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "groupId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "groupName",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "mapProperties",
+      "otherEntityRelationshipName": "operator",
+      "relationshipName": "metaDatas",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20210323155207",
+  "entityTableName": "operator",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

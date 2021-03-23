@@ -1,0 +1,22 @@
+{
+  "universignOedApp": {
+    "adminPreferences": {
+      "home": {
+        "title": "Admin Preferences",
+        "createLabel": "Criar novo(a) Admin Preferences",
+        "createOrEditLabel": "Criar ou editar Admin Preferences",
+        "notFound": "Nenhum Admin Preferences encontrado"
+      },
+      "created": "Um novo Admin Preferences foi criado com o identificador {{ param }}",
+      "updated": "Admin Preferences com identificador {{ param }} foi actualizado",
+      "deleted": "Admin Preferences com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Admin Preferences {{ id }}?"
+      },
+      "detail": {
+        "title": "Admin Preferences"
+      },
+      "filter": "Filter"
+    }
+  }
+}
