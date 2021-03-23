@@ -1,0 +1,72 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="group">
+            <h2><span jhiTranslate="universignOedApp.group.detail.title">Group</span> {{ group.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="universignOedApp.group.name">Name</span></dt>
+                <dd>
+                    <span>{{ group.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.group.universignOrganizationId">Universign Organization Id</span></dt>
+                <dd>
+                    <span>{{ group.universignOrganizationId }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.group.status">Status</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'universignOedApp.GroupStatus.' + group.status }}">{{ group.status }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.group.activateAdvanced">Activate Advanced</span></dt>
+                <dd>
+                    <span>{{ group.activateAdvanced }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.group.universignOrganizationProfil">Universign Organization Profil</span></dt>
+                <dd>
+                    <span>{{ group.universignOrganizationProfil }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.group.createdAt">Created At</span></dt>
+                <dd>
+                    <span>{{ group.createdAt }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.group.lastUpdatedAt">Last Updated At</span></dt>
+                <dd>
+                    <span>{{ group.lastUpdatedAt }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.group.permissions">Permissions</span></dt>
+                <dd>
+                    <div *ngIf="group.permissions">
+                        <a [routerLink]="['/group-permission', group.permissions?.id, 'view']">{{ group.permissions?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.group.groupConfiguration">Group Configuration</span></dt>
+                <dd>
+                    <div *ngIf="group.groupConfiguration">
+                        <a [routerLink]="['/group-configuration', group.groupConfiguration?.id, 'view']">{{ group.groupConfiguration?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.group.parent">Parent</span></dt>
+                <dd>
+                    <div *ngIf="group.parent">
+                        <a [routerLink]="['/group', group.parent?.id, 'view']">{{ group.parent?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/group', group.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
