@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="column">
+            <h2><span jhiTranslate="universignOedApp.column.detail.title">Column</span> {{ column.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="universignOedApp.column.show">Show</span></dt>
+                <dd>
+                    <span>{{ column.show }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.column.name">Name</span></dt>
+                <dd>
+                    <span>{{ column.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.column.type">Type</span></dt>
+                <dd>
+                    <span>{{ column.type }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.column.adminPreferences">Admin Preferences</span></dt>
+                <dd>
+                    <div *ngIf="column.adminPreferences">
+                        <a [routerLink]="['/admin-preferences', column.adminPreferences?.id, 'view']">{{ column.adminPreferences?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/column', column.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

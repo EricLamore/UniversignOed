@@ -1,0 +1,36 @@
+{
+  "universignOedApp": {
+    "administrator": {
+      "home": {
+        "title": "Administrators",
+        "createLabel": "Genera un nuovo Administrator",
+        "createOrEditLabel": "Genera o modifica un Administrator",
+        "notFound": "No Administrators found"
+      },
+      "created": "&Egrave; stato generato un nuovo Administrator con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Administrator identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Administrator con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Administrator {{ id }}?"
+      },
+      "detail": {
+        "title": "Administrator"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "emailAddress": "Email Address",
+      "birthDate": "Birth Date",
+      "role": "Role",
+      "password": "Password",
+      "status": "Status",
+      "adminFunction": "Admin Function",
+      "phone": "Phone",
+      "mobilePhone": "Mobile Phone",
+      "description": "Description",
+      "universignAdmin": "Universign Admin",
+      "activationKey": "Activation Key",
+      "resetKey": "Reset Key",
+      "resetDate": "Reset Date"
+    }
+  }
+}

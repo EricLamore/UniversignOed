@@ -1,0 +1,86 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="administrator">
+            <h2><span jhiTranslate="universignOedApp.administrator.detail.title">Administrator</span> {{ administrator.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="universignOedApp.administrator.firstName">First Name</span></dt>
+                <dd>
+                    <span>{{ administrator.firstName }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.administrator.lastName">Last Name</span></dt>
+                <dd>
+                    <span>{{ administrator.lastName }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.administrator.emailAddress">Email Address</span></dt>
+                <dd>
+                    <span>{{ administrator.emailAddress }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.administrator.birthDate">Birth Date</span></dt>
+                <dd>
+                    <span>{{ administrator.birthDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.administrator.role">Role</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'universignOedApp.Role.' + administrator.role }}">{{ administrator.role }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.administrator.password">Password</span></dt>
+                <dd>
+                    <span>{{ administrator.password }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.administrator.status">Status</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'universignOedApp.AdministratorStatus.' + administrator.status }}">{{ administrator.status }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.administrator.adminFunction">Admin Function</span></dt>
+                <dd>
+                    <span>{{ administrator.adminFunction }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.administrator.phone">Phone</span></dt>
+                <dd>
+                    <span>{{ administrator.phone }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.administrator.mobilePhone">Mobile Phone</span></dt>
+                <dd>
+                    <span>{{ administrator.mobilePhone }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.administrator.description">Description</span></dt>
+                <dd>
+                    <span>{{ administrator.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.administrator.universignAdmin">Universign Admin</span></dt>
+                <dd>
+                    <span>{{ administrator.universignAdmin }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.administrator.activationKey">Activation Key</span></dt>
+                <dd>
+                    <span>{{ administrator.activationKey }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.administrator.resetKey">Reset Key</span></dt>
+                <dd>
+                    <span>{{ administrator.resetKey }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.administrator.resetDate">Reset Date</span></dt>
+                <dd>
+                    <span>{{ administrator.resetDate }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/administrator', administrator.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+{
+  "universignOedApp": {
+    "properties": {
+      "home": {
+        "title": "Properties",
+        "createLabel": "Criar novo(a) Properties",
+        "createOrEditLabel": "Criar ou editar Properties",
+        "notFound": "Nenhum Properties encontrado"
+      },
+      "created": "Um novo Properties foi criado com o identificador {{ param }}",
+      "updated": "Properties com identificador {{ param }} foi actualizado",
+      "deleted": "Properties com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Properties {{ id }}?"
+      },
+      "detail": {
+        "title": "Properties"
+      }
+    }
+  }
+}
