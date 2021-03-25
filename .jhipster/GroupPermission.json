@@ -1,0 +1,33 @@
+{
+  "name": "GroupPermission",
+  "fields": [
+    {
+      "fieldName": "moveOperatorsToUniversignOrganization",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "allowCustomization",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "allowAffiliatedGroup",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "allowAffiliatedCustomization",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210325161601",
+  "entityTableName": "group_permission",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

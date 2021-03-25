@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="groupPermission">
+            <h2><span jhiTranslate="universignOedApp.groupPermission.detail.title">Group Permission</span> {{ groupPermission.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="universignOedApp.groupPermission.moveOperatorsToUniversignOrganization">Move Operators To Universign Organization</span></dt>
+                <dd>
+                    <span>{{ groupPermission.moveOperatorsToUniversignOrganization }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.groupPermission.allowCustomization">Allow Customization</span></dt>
+                <dd>
+                    <span>{{ groupPermission.allowCustomization }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.groupPermission.allowAffiliatedGroup">Allow Affiliated Group</span></dt>
+                <dd>
+                    <span>{{ groupPermission.allowAffiliatedGroup }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.groupPermission.allowAffiliatedCustomization">Allow Affiliated Customization</span></dt>
+                <dd>
+                    <span>{{ groupPermission.allowAffiliatedCustomization }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/group-permission', groupPermission.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

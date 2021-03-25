@@ -1,0 +1,265 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-operator-heading" jhiTranslate="universignOedApp.operator.home.createOrEditLabel">Create or edit a Operator</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.status" for="field_status">Status</label>
+                    <select class="form-control" name="status" formControlName="status" id="field_status">
+                        <option value="CREATED">{{ 'universignOedApp.OpearatorStatus.CREATED' | translate }}</option>
+                        <option value="VALIDATED">{{ 'universignOedApp.OpearatorStatus.VALIDATED' | translate }}</option>
+                    </select>
+                    <div *ngIf="editForm.get('status')!.invalid && (editForm.get('status')!.dirty || editForm.get('status')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('status')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.phoneNumber" for="field_phoneNumber">Phone Number</label>
+                    <input type="text" class="form-control" name="phoneNumber" id="field_phoneNumber"
+                           formControlName="phoneNumber"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.invitationDate" for="field_invitationDate">Invitation Date</label>
+                    <div class="input-group">
+                        <input id="field_invitationDate" type="text" class="form-control" name="invitationDate" ngbDatepicker #invitationDateDp="ngbDatepicker" formControlName="invitationDate"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="invitationDateDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.invitationUrl" for="field_invitationUrl">Invitation Url</label>
+                    <input type="text" class="form-control" name="invitationUrl" id="field_invitationUrl"
+                           formControlName="invitationUrl"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.updateAccessDate" for="field_updateAccessDate">Update Access Date</label>
+                    <input type="checkbox" class="form-control" name="updateAccessDate" id="field_updateAccessDate"
+                           formControlName="updateAccessDate"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.accessDate" for="field_accessDate">Access Date</label>
+                    <div class="input-group">
+                        <input id="field_accessDate" type="text" class="form-control" name="accessDate" ngbDatepicker #accessDateDp="ngbDatepicker" formControlName="accessDate"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="accessDateDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.updateTrainingDate" for="field_updateTrainingDate">Update Training Date</label>
+                    <input type="checkbox" class="form-control" name="updateTrainingDate" id="field_updateTrainingDate"
+                           formControlName="updateTrainingDate"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.trainingDate" for="field_trainingDate">Training Date</label>
+                    <div class="input-group">
+                        <input id="field_trainingDate" type="text" class="form-control" name="trainingDate" ngbDatepicker #trainingDateDp="ngbDatepicker" formControlName="trainingDate"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="trainingDateDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.hasSucceededMCQ" for="field_hasSucceededMCQ">Has Succeeded MCQ</label>
+                    <input type="checkbox" class="form-control" name="hasSucceededMCQ" id="field_hasSucceededMCQ"
+                           formControlName="hasSucceededMCQ"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.updateQCMDate" for="field_updateQCMDate">Update QCM Date</label>
+                    <input type="checkbox" class="form-control" name="updateQCMDate" id="field_updateQCMDate"
+                           formControlName="updateQCMDate"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.mcqDate" for="field_mcqDate">Mcq Date</label>
+                    <div class="input-group">
+                        <input id="field_mcqDate" type="text" class="form-control" name="mcqDate" ngbDatepicker #mcqDateDp="ngbDatepicker" formControlName="mcqDate"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="mcqDateDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.trainingSessionId" for="field_trainingSessionId">Training Session Id</label>
+                    <input type="text" class="form-control" name="trainingSessionId" id="field_trainingSessionId"
+                           formControlName="trainingSessionId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.trainingSessionURL" for="field_trainingSessionURL">Training Session URL</label>
+                    <input type="text" class="form-control" name="trainingSessionURL" id="field_trainingSessionURL"
+                           formControlName="trainingSessionURL"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.sessionId" for="field_sessionId">Session Id</label>
+                    <input type="text" class="form-control" name="sessionId" id="field_sessionId"
+                           formControlName="sessionId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.language" for="field_language">Language</label>
+                    <input type="text" class="form-control" name="language" id="field_language"
+                           formControlName="language"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.groupId" for="field_groupId">Group Id</label>
+                    <input type="text" class="form-control" name="groupId" id="field_groupId"
+                           formControlName="groupId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.groupName" for="field_groupName">Group Name</label>
+                    <input type="text" class="form-control" name="groupName" id="field_groupName"
+                           formControlName="groupName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.signatureStatus" for="field_signatureStatus">Signature Status</label>
+                    <select class="form-control" name="signatureStatus" formControlName="signatureStatus" id="field_signatureStatus">
+                        <option value="READY">{{ 'universignOedApp.SignatureStatus.READY' | translate }}</option>
+                        <option value="EXPIRED">{{ 'universignOedApp.SignatureStatus.EXPIRED' | translate }}</option>
+                        <option value="COMPLETED">{{ 'universignOedApp.SignatureStatus.COMPLETED' | translate }}</option>
+                        <option value="CANCELED">{{ 'universignOedApp.SignatureStatus.CANCELED' | translate }}</option>
+                        <option value="FAILED">{{ 'universignOedApp.SignatureStatus.FAILED' | translate }}</option>
+                        <option value="PENDING">{{ 'universignOedApp.SignatureStatus.PENDING' | translate }}</option>
+                        <option value="UNKNOWN">{{ 'universignOedApp.SignatureStatus.UNKNOWN' | translate }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.isOED" for="field_isOED">Is OED</label>
+                    <input type="checkbox" class="form-control" name="isOED" id="field_isOED"
+                           formControlName="isOED"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.signatureSessionId" for="field_signatureSessionId">Signature Session Id</label>
+                    <input type="text" class="form-control" name="signatureSessionId" id="field_signatureSessionId"
+                           formControlName="signatureSessionId"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.signatureSessionURL" for="field_signatureSessionURL">Signature Session URL</label>
+                    <input type="text" class="form-control" name="signatureSessionURL" id="field_signatureSessionURL"
+                           formControlName="signatureSessionURL"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.universignStatus" for="field_universignStatus">Universign Status</label>
+                    <select class="form-control" name="universignStatus" formControlName="universignStatus" id="field_universignStatus">
+                        <option value="STATUS_INACTIVE">{{ 'universignOedApp.UniversignStatus.STATUS_INACTIVE' | translate }}</option>
+                        <option value="STATUS_ACTIVE">{{ 'universignOedApp.UniversignStatus.STATUS_ACTIVE' | translate }}</option>
+                        <option value="STATUS_DELETED">{{ 'universignOedApp.UniversignStatus.STATUS_DELETED' | translate }}</option>
+                        <option value="STATUS_ON_HOLD">{{ 'universignOedApp.UniversignStatus.STATUS_ON_HOLD' | translate }}</option>
+                        <option value="STATUS_RA_ACTIVE">{{ 'universignOedApp.UniversignStatus.STATUS_RA_ACTIVE' | translate }}</option>
+                        <option value="STATUS_USER_INEXISTENT">{{ 'universignOedApp.UniversignStatus.STATUS_USER_INEXISTENT' | translate }}</option>
+                        <option value="UNKNOWN">{{ 'universignOedApp.UniversignStatus.UNKNOWN' | translate }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.certified" for="field_certified">Certified</label>
+                    <input type="checkbox" class="form-control" name="certified" id="field_certified"
+                           formControlName="certified"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.qualified" for="field_qualified">Qualified</label>
+                    <input type="checkbox" class="form-control" name="qualified" id="field_qualified"
+                           formControlName="qualified"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.previousFinalUniversignStatus" for="field_previousFinalUniversignStatus">Previous Final Universign Status</label>
+                    <select class="form-control" name="previousFinalUniversignStatus" formControlName="previousFinalUniversignStatus" id="field_previousFinalUniversignStatus">
+                        <option value="READY">{{ 'universignOedApp.SignatureStatus.READY' | translate }}</option>
+                        <option value="EXPIRED">{{ 'universignOedApp.SignatureStatus.EXPIRED' | translate }}</option>
+                        <option value="COMPLETED">{{ 'universignOedApp.SignatureStatus.COMPLETED' | translate }}</option>
+                        <option value="CANCELED">{{ 'universignOedApp.SignatureStatus.CANCELED' | translate }}</option>
+                        <option value="FAILED">{{ 'universignOedApp.SignatureStatus.FAILED' | translate }}</option>
+                        <option value="PENDING">{{ 'universignOedApp.SignatureStatus.PENDING' | translate }}</option>
+                        <option value="UNKNOWN">{{ 'universignOedApp.SignatureStatus.UNKNOWN' | translate }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.firstName" for="field_firstName">First Name</label>
+                    <input type="text" class="form-control" name="firstName" id="field_firstName"
+                           formControlName="firstName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.lastName" for="field_lastName">Last Name</label>
+                    <input type="text" class="form-control" name="lastName" id="field_lastName"
+                           formControlName="lastName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.emailAddress" for="field_emailAddress">Email Address</label>
+                    <input type="text" class="form-control" name="emailAddress" id="field_emailAddress"
+                           formControlName="emailAddress"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.birthDate" for="field_birthDate">Birth Date</label>
+                    <div class="input-group">
+                        <input id="field_birthDate" type="text" class="form-control" name="birthDate" ngbDatepicker #birthDateDp="ngbDatepicker" formControlName="birthDate"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="birthDateDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.certifiedUser" for="field_certifiedUser">Certified User</label>
+                    <select class="form-control" id="field_certifiedUser" name="certifiedUser" formControlName="certifiedUser">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="certifiedUserOption.id === editForm.get('certifiedUser')!.value?.id ? editForm.get('certifiedUser')!.value : certifiedUserOption" *ngFor="let certifiedUserOption of certifiedusers; trackBy: trackById">{{ certifiedUserOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="universignOedApp.operator.metaDatas" for="field_metaDatas">Meta Datas</label>
+                    <select class="form-control" id="field_metaDatas" name="metaDatas" formControlName="metaDatas">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="mapPropertiesOption.id === editForm.get('metaDatas')!.value?.id ? editForm.get('metaDatas')!.value : mapPropertiesOption" *ngFor="let mapPropertiesOption of metadatas; trackBy: trackById">{{ mapPropertiesOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

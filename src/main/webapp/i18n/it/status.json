@@ -1,0 +1,10 @@
+{
+  "universignOedApp": {
+    "Status": {
+      "null": "",
+      "UPDATE": "UPDATE",
+      "INSERT": "INSERT",
+      "ERROR": "ERROR"
+    }
+  }
+}
