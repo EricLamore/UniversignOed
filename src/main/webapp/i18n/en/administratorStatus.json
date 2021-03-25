@@ -1,0 +1,10 @@
+{
+  "universignOedApp": {
+    "AdministratorStatus": {
+      "null": "",
+      "REGISTERING": "REGISTERING",
+      "ACTIVE": "ACTIVE",
+      "DEACTIVATED": "DEACTIVATED"
+    }
+  }
+}

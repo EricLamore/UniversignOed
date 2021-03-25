@@ -1,0 +1,24 @@
+{
+  "universignOedApp": {
+    "adminPermissions": {
+      "home": {
+        "title": "Admin Permissions",
+        "createLabel": "Criar novo(a) Admin Permissions",
+        "createOrEditLabel": "Criar ou editar Admin Permissions",
+        "notFound": "Nenhum Admin Permissions encontrado"
+      },
+      "created": "Um novo Admin Permissions foi criado com o identificador {{ param }}",
+      "updated": "Admin Permissions com identificador {{ param }} foi actualizado",
+      "deleted": "Admin Permissions com identificador {{ param }} foi eliminado",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Admin Permissions {{ id }}?"
+      },
+      "detail": {
+        "title": "Admin Permissions"
+      },
+      "oedWrite": "Oed Write",
+      "groupWrite": "Group Write",
+      "adminWrite": "Admin Write"
+    }
+  }
+}

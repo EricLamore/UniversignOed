@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="headerConfiguration">
+            <h2><span jhiTranslate="universignOedApp.headerConfiguration.detail.title">Header Configuration</span> {{ headerConfiguration.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="universignOedApp.headerConfiguration.logo">Logo</span></dt>
+                <dd>
+                    <span>{{ headerConfiguration.logo }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.headerConfiguration.width">Width</span></dt>
+                <dd>
+                    <span>{{ headerConfiguration.width }}</span>
+                </dd>
+                <dt><span jhiTranslate="universignOedApp.headerConfiguration.href">Href</span></dt>
+                <dd>
+                    <span>{{ headerConfiguration.href }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/header-configuration', headerConfiguration.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

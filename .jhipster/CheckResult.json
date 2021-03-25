@@ -1,0 +1,31 @@
+{
+  "name": "CheckResult",
+  "fields": [
+    {
+      "fieldName": "checkErrorMessage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Status",
+      "fieldValues": "UPDATE,INSERT,ERROR"
+    },
+    {
+      "fieldName": "result",
+      "fieldType": "CheckStatus",
+      "fieldValues": "PERFECT,EMAIL_AND_PHONE_IN_OTHER_ORGANISATION,EMAIL_FOUND,EMAIL_FOUND_BUT_PHONE_USED,EMAIL_FOUND_IN_OTHER_ORGANIZATION,EMAIL_FOUND_IN_OTHER_ORGANIZATION_BUT_PHONE_USED,PHONE_FOUND,PHONE_FOUND_IN_OTHER_ORGANIZATION,NOT_FOUND,EMAIL_INVALID,PHONE_INVALID"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210325161901",
+  "entityTableName": "check_result",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Properties",
+  "fields": [],
+  "relationships": [],
+  "changelogDate": "20210325161401",
+  "entityTableName": "properties",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,52 @@
+{
+  "universignOedApp": {
+    "operator": {
+      "home": {
+        "title": "Operators",
+        "createLabel": "Genera un nuovo Operator",
+        "createOrEditLabel": "Genera o modifica un Operator",
+        "notFound": "No Operators found"
+      },
+      "created": "&Egrave; stato generato un nuovo Operator con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Operator identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Operator con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Operator {{ id }}?"
+      },
+      "detail": {
+        "title": "Operator"
+      },
+      "status": "Status",
+      "phoneNumber": "Phone Number",
+      "invitationDate": "Invitation Date",
+      "invitationUrl": "Invitation Url",
+      "updateAccessDate": "Update Access Date",
+      "accessDate": "Access Date",
+      "updateTrainingDate": "Update Training Date",
+      "trainingDate": "Training Date",
+      "hasSucceededMCQ": "Has Succeeded MCQ",
+      "updateQCMDate": "Update QCM Date",
+      "mcqDate": "Mcq Date",
+      "trainingSessionId": "Training Session Id",
+      "trainingSessionURL": "Training Session URL",
+      "sessionId": "Session Id",
+      "language": "Language",
+      "groupId": "Group Id",
+      "groupName": "Group Name",
+      "signatureStatus": "Signature Status",
+      "isOED": "Is OED",
+      "signatureSessionId": "Signature Session Id",
+      "signatureSessionURL": "Signature Session URL",
+      "universignStatus": "Universign Status",
+      "certified": "Certified",
+      "qualified": "Qualified",
+      "previousFinalUniversignStatus": "Previous Final Universign Status",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "emailAddress": "Email Address",
+      "birthDate": "Birth Date",
+      "certifiedUser": "Certified User",
+      "metaDatas": "Meta Datas"
+    }
+  }
+}

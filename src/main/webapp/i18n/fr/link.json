@@ -1,0 +1,24 @@
+{
+  "universignOedApp": {
+    "link": {
+      "home": {
+        "title": "Links",
+        "createLabel": "Créer un nouveau Link",
+        "createOrEditLabel": "Créer ou éditer un Link",
+        "notFound": "Aucun Link trouvé"
+      },
+      "created": "Un nouveau Link a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Link avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Link avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Link {{ id }} ?"
+      },
+      "detail": {
+        "title": "Link"
+      },
+      "group": "Group",
+      "group": "Group",
+      "group": "Group"
+    }
+  }
+}
